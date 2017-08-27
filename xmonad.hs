@@ -56,9 +56,10 @@ layout = spacedRes ||| Circle ||| ful
 -- startup --
 startUp :: X()
 startUp = do
-	spawnOnce "./.fehbg"
+	spawnOnce "~/.fehbg"
 	spawnOnce "xrdb -load .Xresources"
 	spawnOnce "autocutsel -selection CLIPBOARD -fork"
+	spawnOnce "~/.local/scripts/displayconf.sh"
 --	spawnOnce "autocutsel -selection PRIMARY -fork"
 -------------
 

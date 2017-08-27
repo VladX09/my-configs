@@ -5,8 +5,8 @@ export XAUTHORITY=/home/vlad/.Xauthority
 
 HDMIs=$(xrandr | grep HDMI | grep -w connected |wc -l)
 VGAs=$(xrandr | grep VGA  | grep -w connected |wc -l)
+let "dev = $HDMIs * 10 + $VGAs"
 
-echo "$dev" >> /home/vlad/debug.log
 case $dev in
 0)
 	xrandr --output LVDS-1 --primary
