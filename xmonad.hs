@@ -22,6 +22,9 @@ import XMonad.Layout.Gaps
 import XMonad.Actions.CycleWS (prevWS, nextWS)
 
 import System.IO
+import Graphics.X11.Xinerama
+import Graphics.X11.Xlib.Display
+import Graphics.X11.Xlib.Types
 
 myWorkspaces    = ["DEV","WEB","MEDIA","SYS"]
 		  
@@ -62,15 +65,17 @@ startUp = do
 	spawnOnce "~/.local/scripts/displayconf.sh"
 --	spawnOnce "autocutsel -selection PRIMARY -fork"
 -------------
-
-panel = "dzen2 -ta l -p -w 400 -y 10 -x 10 -h 26 -e '' "
-
+--panel = "dzen2 -ta l -p -w 400 -y 10 -x 10 -h 26 -e '' "
+--infopanel = "conky | dzen2 -x 410 -y 10 -h 26 -w 1500 -p -ta r -e '' "
 main = do
-      	bar <- spawnPipe panel
-	info <- spawnPipe "conky | dzen2 -x 410 -y 10 -h 26 -w 1500 -p -ta r -e '' "
+	rects <- openDisplay "" >>= getScreenInfo
+	let scrWidth = maximum $ map rect_width rects
+	let panelWidth = scrWidth - 420	
+      	bar <- spawnPipe "dzen2 -ta l -p -w 400 -y 10 -x 10 -h 26 -e '' "
+	info <- spawnPipe $ "conky | dzen2 -x 410 -y 10 -h 26 -w " ++ show panelWidth  ++ " -p -ta r -e '' "
 	xmonad $  desktopConfig
 		{ modMask = mod4Mask
-		,terminal = "urxvt"
+		,terminal = "xterm"
 		,focusFollowsMouse = True
 		,borderWidth = 5
 		,focusedBorderColor = "#6A555C" --"#404752"
@@ -79,5 +84,5 @@ main = do
 		,layoutHook = windowArrange layout
 		,logHook = logbar bar
 		,startupHook = startUp
-	    	}  `additionalKeysP`  [ ("<F1>", spawn "rofi -show run")
+	    	}  `additionalKeysP`  [ ("<F1>", spawn "rofi -modi run,drun -show drun")
 				      ]
