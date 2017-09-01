@@ -5,3 +5,5 @@ cp $HOME/.Xresources $DIR/
 cp $HOME/.conkyrc $DIR/ 
 cp -r $HOME/.local/scripts/ $DIR/
 cp /etc/udev/rules.d/95-myudev.rules $DIR/
+cp -r /etc/lightdm/lightdm.conf.d/ $DIR/ 
+
