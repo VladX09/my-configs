@@ -64,9 +64,16 @@ startUp = do
 	spawnOnce "autocutsel -selection CLIPBOARD -fork"
 	spawnOnce "~/.local/scripts/displayconf.sh"
 --	spawnOnce "autocutsel -selection PRIMARY -fork"
+
+-- hotkeys --
+hotkeys = [ ("M-`", spawn "rofi -modi run,drun -show drun")
+	  , ("<XF86AudioLowerVolume>", spawn "amixer -Mq sset Master 2%-")
+	  , ("<XF86AudioRaiseVolume>", spawn "amixer -Mq sset Master 2%+") 
+	  , ("<XF86AudioMute>", spawn "amixer -D pulse sset Master 1+ toggle") 
+	  , ("M-l", spawn "dm-tool lock") 
+	  ]
 -------------
---panel = "dzen2 -ta l -p -w 400 -y 10 -x 10 -h 26 -e '' "
---infopanel = "conky | dzen2 -x 410 -y 10 -h 26 -w 1500 -p -ta r -e '' "
+
 main = do
 	rects <- openDisplay "" >>= getScreenInfo
 	let scrWidth = maximum $ map rect_width rects
@@ -84,5 +91,4 @@ main = do
 		,layoutHook = windowArrange layout
 		,logHook = logbar bar
 		,startupHook = startUp
-	    	}  `additionalKeysP`  [ ("<F1>", spawn "rofi -modi run,drun -show drun")
-				      ]
+	    	}  `additionalKeysP` hotkeys
