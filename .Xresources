@@ -92,11 +92,27 @@ dzen2.foreground: #DEE3E0
 dzen2.background: #343C48
 
 !---------------------------------------
+!Polybar settings
+!---------------------------------------
+polybar.font-0:-*-dejavu sans-medium-r-normal--16-*-*-*-*-*-iso8859-1
+polybar.font-1:Font Awesome 5 Free Regular
+polybar.font-2:Font Awesome 5 Free Solid
+polybar.foreground: #DEE3E0
+polybar.background: #343C48
+polybar.background-alt: #444
+polybar.foreground-alt: #555
+polybar.primary: #ffb52a
+polybar.secondary: #e60053
+polybar.alert: #bd2c40
+polybar.neutral: #03a9f4
+polybar.good: #8bc34a
+
+!---------------------------------------
 !Rofi settings
 !---------------------------------------
 !rofi.modi: run,ssh
 rofi.terminal: xterm	
-rofi.font: Dejavu Sans Mono 12
+rofi.font: Droid Sans Mono 12
 rofi.fg:  #DEE3E0
 rofi.bg: #343C48
 rofi.fg-active: #528588
@@ -152,3 +168,5 @@ xterm*color14:     #177f75
 ! Белый
 xterm*color7:      #cdcaa9
 xterm*color15:     #ffffff
+
+XTerm*selectToClipboard:true

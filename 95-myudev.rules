@@ -1,2 +1,0 @@
-ACTION=="change", KERNEL=="card0", SUBSYSTEM=="drm", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/vlad/.Xauthority", RUN+="/home/vlad/.local/scripts/displayconf.sh"
-
