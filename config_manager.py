@@ -12,7 +12,8 @@ configs = {
     ".gtkrc-2.0": "~/",
     "bspwm/": "~/.config/",
     "sxhkd/": "~/.config/",
-    "awesome": "/usr/share/fonts/opentype/"
+    "awesome": "/usr/share/fonts/opentype/",
+    "compton.conf" : "~/.config"
 }
 
 cur_dir = pathlib.Path(os.path.dirname(__file__))

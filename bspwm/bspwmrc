@@ -20,3 +20,5 @@ bspc rule -a Chromium-browser desktop=WEB state=monocle follow=on
 bspc rule -a Emacs24 desktop=DEV state=tiled follow=on
 bspc rule -a Pcmanfm desktop=SYS state=tiled follow=on
 bspc rule -a Transmission-gtk desktop=SYS state=float follow=off
+
+compton &
