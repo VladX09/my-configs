@@ -39,6 +39,11 @@ super + F4
 alt + {_,shift + }F4
 	bspc node -{c,k}
 
+# CLOSE AND KILL
+ctrl + {_,shift + }q
+	bspc node -{c,k}
+
+
 # NAVIGATE LAYOUTS
 super + {_,shift + }space
 	bspc desktop --layout {next,prev}
