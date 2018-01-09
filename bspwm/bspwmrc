@@ -2,8 +2,8 @@
 
 sxhkd &
 
-xrdb -load .Xresources
-~/.local/scripts/displayconf.sh
+xrdb -load .Xresources &
+~/.local/scripts/displayconf.sh &
 
 bspc config border_width         2
 bspc config window_gap          12
@@ -11,14 +11,14 @@ bspc config window_gap          12
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      false
-bspc config focus_follows_pointer true
-bspc config pointer_follows_focus true
-bspc config pointer_follows_monitor true
 bspc config remove_unplugged_monitors true
+bspc config focus_follows_pointer true
+bspc config pointer_follows_monitor true
+bspc config pointer_follows_focus false
 bspc config pointer_modifier mod1
-bspc config pointer_action1 = move
-bspc config pointer_action2 = resize_side
-
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_side
+bspc config pointer_action3 resize_corner
 
 bspc rule -a Chromium-browser desktop=WEB state=monocle follow=on
 bspc rule -a Emacs24 desktop=DEV state=tiled follow=on
