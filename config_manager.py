@@ -5,16 +5,18 @@ import shutil
 import sys
 
 configs = {
-    ".Xresources": "~/",
-    "scripts/": "~/.local/",
-    "lightdm/": "/etc/",
-    "settings.ini": "~/.config/gtk-3.0/",
-    ".gtkrc-2.0": "~/",
-    "bspwm/": "~/.config/",
-    "sxhkd/": "~/.config/",
-    "awesome": "/usr/share/fonts/opentype/",
-    "compton.conf" : "~/.config"
+    ".Xresources": "~/.Xresources",
+    "scripts/": "~/.local/scripts/",
+    "lightdm/": "/etc/lightdm",
+    "settings.ini": "~/.config/gtk-3.0/settings.ini",
+    ".gtkrc-2.0": "~/.gtkrc-2.0",
+    "bspwm/": "~/.config/bspwm/",
+    "sxhkd/": "~/.config/sxhkd/",
+    "polybar/": "~/.config/polybar/",
+    "awesome": "/usr/share/fonts/opentype/awesome",
+    "compton.conf": "~/.config/compton.conf"
 }
+
 
 cur_dir = pathlib.Path(os.path.dirname(__file__))
 
@@ -28,18 +30,29 @@ def configure_parser():
     return parser
 
 
-def list_paths():
+def prepare_config_paths():
+    sources = []
+    destionations = []
     for file, src_fld in configs.items():
-        src = pathlib.Path(src_fld).expanduser() / file
-        dst = cur_dir / file
-        print("{} <-> {}".format(src, dst))
+        sources.append(pathlib.Path(src_fld).expanduser())
+        destionations.append(cur_dir / file)
+    maxlen = max(len(str(path)) for path in sources)
+    result = []
+    for src, dst in zip(sources, destionations):
+        result.append(f"{src!s:<{maxlen}} <-> {dst!s:<{maxlen}}")
+    return result
+
+
+def list_paths():
+    for s in prepare_config_paths():
+        print(s)
 
 
 def collect_files(files):
     for file in files:
-        src = pathlib.Path(configs[file]).expanduser() / file
+        src = pathlib.Path(configs[file]).expanduser()
         dst = cur_dir / file
-        print("{} -> {}".format(src, dst))
+        print(f"{src!s} -> {dst!s}")
         if src.is_dir():
             shutil.copytree(src, dst)
         else:
@@ -48,6 +61,12 @@ def collect_files(files):
 
 def deploy_files(files):
     pass
+
+
+def select_files():
+    for i, line in enumerate(prepare_config_paths()):
+        print(f"[{i}] : {line}")
+    print("Select files:")
 
 
 if __name__ == "__main__":
