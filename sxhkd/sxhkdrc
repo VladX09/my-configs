@@ -40,8 +40,8 @@ alt + {_,shift + }F4
 	bspc node -{c,k}
 
 # CLOSE AND KILL
-ctrl + {_,shift + }q
-	bspc node -{c,k}
+# ctrl + {_,shift + }q
+# 	bspc node -{c,k}
 
 
 # NAVIGATE LAYOUTS

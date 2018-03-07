@@ -48,7 +48,7 @@ font-2 = ${xrdb:polybar.font-2}
 
 modules-left = bspwm
 modules-center = xwindow
-modules-right = filesystem backlight-acpi volume wlan eth battery xkeyboard date 
+modules-right = filesystem volume wlan eth battery xkeyboard date 
 
 ; tray-position = right
 ; tray-padding = 2
