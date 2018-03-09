@@ -26,3 +26,4 @@ bspc rule -a Pcmanfm desktop=SYS state=tiled follow=on
 bspc rule -a Transmission-gtk desktop=SYS state=float follow=off
 
 compton &
+mpd &

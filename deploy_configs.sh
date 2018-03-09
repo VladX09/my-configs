@@ -9,6 +9,7 @@ SXHKD=~/.config/sxhkd
 POLYBAR=~/.config/polybar
 AWESOME=/usr/share/fonts/opentype/awesome
 COMPTON=~/.config/compton.conf
+MPD=~/.config/mpd
 
 ln -s $DIR/.Xresources $XRESOURCES
 ln -s $DIR/scripts $SCRIPTS
@@ -20,4 +21,4 @@ ln -s $DIR/sxhkd $SXHKD
 ln -s $DIR/polybar $POLYBAR
 sudo ln -s $DIR/awesome $AWESOME
 ln -s $DIR/compton.conf $COMPTON
-
+ln -s $DIR/mpd $MPD
