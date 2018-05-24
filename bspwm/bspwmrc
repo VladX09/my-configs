@@ -21,7 +21,7 @@ bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
 
 bspc rule -a Chromium-browser desktop=WEB state=monocle follow=on
-bspc rule -a Emacs24 desktop=DEV state=tiled follow=on
+bspc rule -a Emacs25 desktop=DEV state=tiled follow=on
 bspc rule -a Pcmanfm desktop=SYS state=tiled follow=on
 bspc rule -a Transmission-gtk desktop=SYS state=float follow=off
 
