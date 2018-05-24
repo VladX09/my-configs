@@ -27,7 +27,11 @@ super + alt + l
 
 # RESCAN DISPLAYS
 super + F5
-      ~/.local/scripts/displayconf.sh &
+  ~/.local/scripts/displayconf.sh &
+
+# Restart WPA supplicant service
+super + F2
+  gksu systemctl restart wpa_supplicant.service
 
 
 # ==== BSPWM HOTKEYS ====
