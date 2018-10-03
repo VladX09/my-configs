@@ -102,8 +102,8 @@
   "SPC" '("exec" . helm-M-x)
   "TAB" 'other-window
 
-  "wv" 'split-window-horizontally
-  "wh" 'split-window-vertically
+  "w3" 'split-window-right
+  "w2" 'split-window-below
   "wd" 'delete-window
   "wc" 'centered-window-mode
 
@@ -131,6 +131,11 @@
 
   "gs" 'magit-status
   "gm" 'magit-dispatch-popup
+  )
+
+(general-def 'normal 'with-editor-mode-map
+  ",," 'with-editor-finish
+  ",k" 'with-editor-cancel
   )
 
 (general-def 'normal 'global
