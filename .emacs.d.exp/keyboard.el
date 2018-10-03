@@ -71,7 +71,7 @@
 (ad-activate 'next-buffer)
 (ad-activate 'previous-buffer)
 
-(use-package olivetti
+(use-package centered-window
   :config
   (setq-default olivetti-body-width 0.85))
 
@@ -105,7 +105,7 @@
   "wv" 'split-window-horizontally
   "wh" 'split-window-vertically
   "wd" 'delete-window
-  "wc" 'olivetti-mode
+  "wc" 'centered-window-mode
 
   "ff" 'helm-find-files
   "bb" 'helm-mini

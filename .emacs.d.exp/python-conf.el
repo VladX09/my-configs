@@ -48,7 +48,7 @@
   (general-def 'normal 'local
     :prefix "SPC"
     "m" '("major mode")
-    "m [tab]" 'anaconda-mode-complete
+    "m TAB" 'anaconda-mode-complete
     "mg" 'anaconda-mode-find-definitions
     "mG" 'anaconda-mode-find-definitions-other-window
     "ma" 'anaconda-mode-find-assignments
