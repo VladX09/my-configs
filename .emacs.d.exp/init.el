@@ -30,17 +30,20 @@
 (load-user-file "helm-conf.el")
 (load-user-file "theme.el")
 (load-user-file "python-conf.el")
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(centered-window-mode t)
  '(custom-safe-themes
    (quote
 	("6b2636879127bf6124ce541b1b2824800afc49c6ccd65439d6eb987dbf200c36" "aaffceb9b0f539b6ad6becb8e96a04f2140c8faa1de8039a343a4f1e009174fb" default)))
+ '(cwm-centered-window-width 150)
  '(package-selected-packages
    (quote
-	(exec-path-from-shell sdev-mypy olivetti evil-magit pyenv-mode which-key use-package move-text helm-projectile general evil-surround evil-nerd-commenter evil-leader evil-indent-textobject evil-escape dracula-theme doom-themes dired-sidebar darktooth-theme cyberpunk-theme company-anaconda ace-window))))
+	(centered-window exec-path-from-shell sdev-mypy olivetti evil-magit pyenv-mode which-key use-package move-text helm-projectile general evil-surround evil-nerd-commenter evil-leader evil-indent-textobject evil-escape dracula-theme doom-themes dired-sidebar darktooth-theme cyberpunk-theme company-anaconda ace-window))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
