@@ -18,3 +18,14 @@
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-step 1) ;; keyboard scroll one line at a time(setq-default indent-tabs-mode nil)
 
+
+;; add advices for window splitting during centered mode
+(advice-add 'split-window-sensibly :around 'ensure-centered-mode)
+(advice-add 'split-window-right :around #'ensure-centered-mode)
+
+;; TODO: add nop when centered mode is disabled
+(defun ensure-centered-mode (split-fun &rest args)
+  (centered-window-mode-toggle)
+  (apply split-fun args)
+  (centered-window-mode-toggle)
+  ) 
