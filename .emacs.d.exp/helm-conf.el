@@ -17,5 +17,6 @@
   :config
   (helm-projectile-on))
 
+(use-package helm-ag)
 (use-package magit)
 (use-package evil-magit)
