@@ -121,7 +121,6 @@
   "h" '("helm" . helm-command-prefix)
 
   "ad" 'dired
-  "as" '("dired-sidebar" . dired-sidebar-toggle-sidebar)
 
   "tn" 'linum-mode
 
@@ -148,6 +147,12 @@
   "[b" 'previous-buffer
   "[ SPC" 'insert-line-above
   "] SPC" 'insert-line-below
+  )
+
+
+(general-def 'normal 'dired-mode-map
+  "RET" 'dired-find-alternate-file
+  "^" (lambda () (interactive) (find-alternate-file ".."))
   )
 
 (general-def 'helm-map
