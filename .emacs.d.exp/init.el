@@ -43,11 +43,11 @@
  '(cwm-centered-window-width 150)
  '(package-selected-packages
    (quote
-	(centered-window exec-path-from-shell sdev-mypy olivetti evil-magit pyenv-mode which-key use-package move-text helm-projectile general evil-surround evil-nerd-commenter evil-leader evil-indent-textobject evil-escape dracula-theme doom-themes dired-sidebar darktooth-theme cyberpunk-theme company-anaconda ace-window))))
+	(py-isort yapfify centered-window exec-path-from-shell sdev-mypy olivetti evil-magit pyenv-mode which-key use-package move-text helm-projectile general evil-surround evil-nerd-commenter evil-leader evil-indent-textobject evil-escape dracula-theme doom-themes dired-sidebar darktooth-theme cyberpunk-theme company-anaconda ace-window))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(fringe ((t (:background "#282c34")))))
 (put 'dired-find-alternate-file 'disabled nil)
