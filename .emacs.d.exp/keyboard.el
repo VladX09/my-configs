@@ -115,7 +115,7 @@
   "bn" 'next-buffer
   "bp" 'previous-buffer
   "bk" '("kill")
-  "bka" 'kill-other-buffers
+  "bko" 'kill-other-buffers
   "bkn" 'close-and-kill-next-pane
   "bkt" 'close-and-kill-this-pane
 
