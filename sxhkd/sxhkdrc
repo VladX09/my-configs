@@ -84,6 +84,9 @@ super + {_,shift + }Tab
 super + {_,shift} + bracket{left,right}
 	bspc {desktop -f, node -d} {prev,next}.local
 
+super + {_,shift} + {a,d}
+	bspc {desktop -f, node -d} {prev,next}.local
+
 # FOCUS THE NEXT/PREVIOUS MONITOR
 super + {q,e}
 	bspc monitor -f {prev,next}
