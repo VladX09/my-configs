@@ -77,6 +77,11 @@
 
 ;; Set leader SPC prefix
 (defconst leader-key "SPC")
+
+(general-unbind '(normal motion)
+  leader-key
+  )
+
 (general-create-definer leader-def
  :states 'normal
  :keymaps 'override
