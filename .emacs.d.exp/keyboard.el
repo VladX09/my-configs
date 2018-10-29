@@ -151,7 +151,7 @@
   "[e" 'move-text-up
   "]e" 'move-text-down
   "[[" 'evil-backward-section-begin
-  "]]" 'evil-backward-section-end
+  "]]" 'evil-forward-section-begin
   "]b" 'next-buffer
   "[b" 'previous-buffer
   "[ SPC" 'insert-line-above
