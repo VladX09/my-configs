@@ -22,7 +22,7 @@
   (flycheck-define-checker
     python-mypy ""
     :command ("mypy"
-              "--ignore-missing-imports" "--fast-parser"
+              "--ignore-missing-imports"
               "--python-version" "3.6"
               source-original)
     :error-patterns
