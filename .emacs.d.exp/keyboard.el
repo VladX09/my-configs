@@ -83,7 +83,7 @@
   )
 
 (general-create-definer leader-def
- :states 'normal
+ :states '(normal motion)
  :keymaps 'override
  :prefix leader-key)
 
