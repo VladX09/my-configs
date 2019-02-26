@@ -29,8 +29,9 @@
 (load-user-file "keyboard.el")
 (load-user-file "helm-conf.el")
 (load-user-file "theme.el")
-;; (load-user-file "python-conf.el")
-(load-user-file "python-ls.el")
+(load-user-file "python-conf.el")
+(load-user-file "org.el")
+;; (load-user-file "python-ls.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
