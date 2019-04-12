@@ -8,6 +8,7 @@
 (global-hl-line-mode +1)
 (show-paren-mode 1)
 (defalias 'yes-or-no-p 'y-or-n-p)
+(setq-default indent-tabs-mode nil)
 
 (setq make-backup-files nil) ; stop creating backup~ files
 (setq auto-save-default nil) ; stop creating #autosave# files
@@ -58,3 +59,6 @@
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "multimarkdown"))
+
+(use-package dockerfile-mode)
+(use-package yaml-mode)
