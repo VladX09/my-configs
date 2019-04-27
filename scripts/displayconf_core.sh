@@ -11,10 +11,10 @@ case $dev in
         xrandr --output VGA-1  --off
 ;;
 1)
-        xrandr --output VGA-1 --auto --left-of LVDS-1 --primary
+        xrandr --output VGA-1 --auto --above LVDS-1 --primary
 ;;
 10)
-        xrandr --output HDMI-1 --auto --left-of LVDS-1 --primary
+        xrandr --output HDMI-1 --auto --above LVDS-1 --primary
 ;;
 11)
         xrandr --output VGA-1 --auto --left of LVDS-1

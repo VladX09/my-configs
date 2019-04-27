@@ -22,12 +22,12 @@ case $dev in
     bspc monitor LVDS-1 -d DEV WEB SYS MEDIA
 ;;
 1)
-    xrandr --output VGA-1 --auto --left-of LVDS-1 --primary
+    xrandr --output VGA-1 --auto --above LVDS-1 --primary
     bspc monitor LVDS-1 -d SYS MEDIA
     bspc monitor VGA-1  -d DEV WEB
 ;;
 10)
-    xrandr --output HDMI-1 --auto --left-of LVDS-1 --primary
+    xrandr --output HDMI-1 --auto --above LVDS-1 --primary
     bspc monitor LVDS-1 -d SYS MEDIA
     bspc monitor HDMI-1  -d DEV WEB
 ;;
