@@ -133,7 +133,7 @@
 
   "tn" 'linum-mode
 
-  "/" '("search" . helm-do-grep-ag)
+  "/" '("search" . helm-do-ag)
 
   "p" '("projectile" . projectile-command-map)
 

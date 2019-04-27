@@ -24,13 +24,13 @@
   "Load a file in current user's configuration directory"
   (load-file (expand-file-name file user-init-dir)))
 
-
 (load-user-file "basic.el")
 (load-user-file "keyboard.el")
 (load-user-file "helm-conf.el")
 (load-user-file "theme.el")
-;; (load-user-file "python-conf.el")
-(load-user-file "python-ls.el")
+(load-user-file "python-conf.el")
+(load-user-file "org.el")
+;; (load-user-file "python-ls.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -44,7 +44,7 @@
  '(cwm-centered-window-width 150)
  '(package-selected-packages
    (quote
-	(helm-ag py-isort yapfify centered-window exec-path-from-shell sdev-mypy olivetti evil-magit pyenv-mode which-key use-package move-text helm-projectile general evil-surround evil-nerd-commenter evil-leader evil-indent-textobject evil-escape dracula-theme doom-themes dired-sidebar darktooth-theme cyberpunk-theme company-anaconda ace-window))))
+	(dockerfile-mode yaml-mode multiple-cursors gnuplot gnuplot-mode helm-swoop helm-ag py-isort yapfify centered-window exec-path-from-shell sdev-mypy olivetti evil-magit pyenv-mode which-key use-package move-text helm-projectile general evil-surround evil-nerd-commenter evil-leader evil-indent-textobject evil-escape dracula-theme doom-themes dired-sidebar darktooth-theme cyberpunk-theme company-anaconda ace-window))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

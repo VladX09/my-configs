@@ -48,6 +48,7 @@
   (anaconda-eldoc-mode)
   (flycheck-mode)
   (linum-mode 1)
+  (require 'pyenv-mode-auto)
   (setq flychek-checker 'python-flake8)
   (general-def 'normal 'local
     :prefix "SPC"
