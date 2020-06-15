@@ -13,4 +13,5 @@
 
     ;; Corrects (and improves) org-mode's native fontification.
     (doom-themes-org-config)
-  )
+    (set-default-font "JetBrains Mono 14")
+)
