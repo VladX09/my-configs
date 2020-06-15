@@ -8,8 +8,13 @@
 
 (add-hook 'after-init-hook 'global-company-mode)
 
-(use-package pyenv-mode)
+(use-package pyenv-mode
+  :config
+  (setenv "PYENV_ROOT" "$HOME/.pyenv" t)
+  (setenv "PATH" "$PYENV_ROOT/bin:$PATH" t)
+)
 (use-package pyenv-mode-auto)
+
 (use-package company-anaconda)
 (use-package yapfify)
 (use-package py-isort)
