@@ -11,7 +11,7 @@
 (use-package pyenv-mode
   :config
   (setenv "PYENV_ROOT" "$HOME/.pyenv" t)
-  (setenv "PATH" "$PYENV_ROOT/bin:$PATH" t)
+  (setenv "PATH" "$PYENV_ROOT/shims:$PYENV_ROOT/plugins/pyenv-virtualenv/shims:$PYENV_ROOT/bin:$PATH" t)
 )
 (use-package pyenv-mode-auto)
 
