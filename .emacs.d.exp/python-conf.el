@@ -6,19 +6,29 @@
   (setq company-dabbrev-downcase 0)
   (setq company-idle-delay 0))
 
+(use-package company-anaconda)
+(eval-after-load "company"
+ '(add-to-list 'company-backends 'company-anaconda))
+
 (add-hook 'after-init-hook 'global-company-mode)
 
+; Add pyenv handling
 (add-to-list 'load-path (expand-file-name "./pyenv.el/" user-emacs-directory))
 (require 'pyenv)
 (global-pyenv-mode)
 
-(use-package company-anaconda)
+; Add autoswitching pyenv versions
+(use-package switch-buffer-functions
+  :config
+  (defun pyenv-update-on-buffer-switch (prev curr)
+    (if (string-equal "Python" (format-mode-line mode-name nil nil curr))
+        (pyenv-use-corresponding)))
+
+  (add-hook 'switch-buffer-functions 'pyenv-update-on-buffer-switch))
+
+; Add plugins
 (use-package yapfify)
 (use-package py-isort)
- 
-(eval-after-load "company"
- '(add-to-list 'company-backends 'company-anaconda))
-
 (use-package flycheck
   :config
   (flycheck-define-checker
