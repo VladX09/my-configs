@@ -13,7 +13,7 @@
 (add-hook 'after-init-hook 'global-company-mode)
 
 ; Add pyenv handling
-(add-to-list 'load-path (expand-file-name "./pyenv.el/" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "./pyenv/" user-emacs-directory))
 (require 'pyenv)
 (global-pyenv-mode)
 
