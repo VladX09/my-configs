@@ -1,0 +1,3 @@
+[submodule ".emacs.d.exp/pyenv.el"]
+	path = .emacs.d.exp/pyenv.el
+	url = https://github.com/aiguofer/pyenv.el.git

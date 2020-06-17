@@ -8,12 +8,9 @@
 
 (add-hook 'after-init-hook 'global-company-mode)
 
-(use-package pyenv-mode
-  :config
-  (setenv "PYENV_ROOT" "$HOME/.pyenv" t)
-  (setenv "PATH" "$PYENV_ROOT/shims:$PYENV_ROOT/plugins/pyenv-virtualenv/shims:$PYENV_ROOT/bin:$PATH" t)
-)
-(use-package pyenv-mode-auto)
+(add-to-list 'load-path (expand-file-name "./pyenv.el/" user-emacs-directory))
+(require 'pyenv)
+(global-pyenv-mode)
 
 (use-package company-anaconda)
 (use-package yapfify)
@@ -53,7 +50,6 @@
   (anaconda-eldoc-mode)
   (flycheck-mode)
   (linum-mode 1)
-  (require 'pyenv-mode-auto)
   (setq flychek-checker 'python-flake8)
   (general-def 'normal 'local
     :prefix "SPC"
