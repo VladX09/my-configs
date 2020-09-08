@@ -42,11 +42,11 @@
    (quote
     ("6b2636879127bf6124ce541b1b2824800afc49c6ccd65439d6eb987dbf200c36" "aaffceb9b0f539b6ad6becb8e96a04f2140c8faa1de8039a343a4f1e009174fb" default)))
  '(cwm-centered-window-width 100)
- '(projectile-switch-project-action (quote magit-status))
  '(magit-display-buffer-function (quote magit-display-buffer-same-window-except-diff-v1))
  '(package-selected-packages
    (quote
-    (dockerfile-mode yaml-mode multiple-cursors gnuplot gnuplot-mode helm-swoop helm-ag py-isort yapfify centered-window exec-path-from-shell sdev-mypy olivetti evil-magit pyenv-mode which-key use-package move-text helm-projectile general evil-surround evil-nerd-commenter evil-leader evil-indent-textobject evil-escape dracula-theme doom-themes dired-sidebar darktooth-theme cyberpunk-theme company-anaconda ace-window))))
+    (dot-mode dockerfile-mode yaml-mode multiple-cursors gnuplot gnuplot-mode helm-swoop helm-ag py-isort yapfify centered-window exec-path-from-shell sdev-mypy olivetti evil-magit pyenv-mode which-key use-package move-text helm-projectile general evil-surround evil-nerd-commenter evil-leader evil-indent-textobject evil-escape dracula-theme doom-themes dired-sidebar darktooth-theme cyberpunk-theme company-anaconda ace-window)))
+ '(projectile-switch-project-action (quote magit-status)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
