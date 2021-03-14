@@ -1,5 +1,7 @@
 // Custom Typographic Keyboard
-// added numbersign on the "1" in the 3rd layer
+// Changed
+// numbersign on the "3" in the 3rd layer
+// circumflex on the "6" in the 3rd layer
 
 // Based on
 // Typographic Keyboard
@@ -21,7 +23,7 @@ xkb_symbols "base" {
     key <AE03> { [ NoSymbol,   NoSymbol,            numbersign,              onethird ] }; // "3"
     key <AE04> { [ NoSymbol,   NoSymbol,                dollar,            onequarter ] }; // "4"
     key <AE05> { [ NoSymbol,   NoSymbol,                 U2030,              NoSymbol ] }; // "5"
-    key <AE06> { [ NoSymbol,   NoSymbol,               uparrow,              NoSymbol ] }; // "6"
+    key <AE06> { [ NoSymbol,   NoSymbol,           asciicircum,               uparrow ] }; // "6"
     key <AE07> { [ NoSymbol,   NoSymbol,             ampersand,          questiondown ] }; // "7"
     key <AE08> { [ NoSymbol,   NoSymbol,              infinity,             oneeighth ] }; // "8"
     key <AE09> { [ NoSymbol,   NoSymbol,             leftarrow,              NoSymbol ] }; // "9"
