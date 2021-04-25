@@ -2,6 +2,7 @@
 // Changed
 // numbersign on the "3" in the 3rd layer
 // circumflex on the "6" in the 3rd layer
+// bar on the backslash in the 3rd layer
 
 // Based on
 // Typographic Keyboard
@@ -40,6 +41,7 @@ xkb_symbols "base" {
     key <AD10> { [ NoSymbol,   NoSymbol,                 acute,           doubleacute ] }; // "p"
     key <AD11> { [ NoSymbol,   NoSymbol,           bracketleft,             braceleft ] }; // "["
     key <AD12> { [ NoSymbol,   NoSymbol,          bracketright,            braceright ] }; // "]"
+    key <BKSL> { [ NoSymbol,   NoSymbol,          bar,                     NoSymbol   ] }; // "|"
 
     // 3rd keyboard row
     key <AC01> { [ NoSymbol,   NoSymbol,                 U0301,              NoSymbol ] }; // "a"
