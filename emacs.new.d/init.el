@@ -22,13 +22,11 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
-;; Disable package.el in favor of straight.el
-;; (setq package-enable-at-startup nil)
-
-;; Disable modification tracking
-;; (check-on-save find-when-checking)
-
 ;; Packages list
+;; use-package macro
+(straight-use-package 'use-package)
+(require 'use-package)
+
 ;; Theme
 (straight-use-package 'doom-themes)
 
