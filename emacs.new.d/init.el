@@ -29,6 +29,7 @@
 
 ;; Theme
 (straight-use-package 'doom-themes)
+(straight-use-package 'centered-window)
 
 ;; Keyboard
 (straight-use-package 'evil)

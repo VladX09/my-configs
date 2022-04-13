@@ -84,6 +84,7 @@
 
 (use-package centered-window
   :config
+  (setq centered-window-mode t)
   (setq-default olivetti-body-width 0.85)
 )
 
