@@ -1,3 +1,9 @@
+(use-package company
+  :ensure t
+  :config
+  (add-hook 'after-init-hook 'global-company-mode)
+)
+
 (setq-default tab-width 4)
 ;; (setq indent-line-function 'insert-tab)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
@@ -62,3 +68,17 @@
 
 (use-package dockerfile-mode)
 (use-package yaml-mode)
+(use-package ledger-mode
+  :ensure t
+  :init
+  (setq ledger-clear-whole-transactions t)
+  :config
+  (add-to-list 'evil-emacs-state-modes 'ledger-report-mode)
+  :mode "\\.dat\\'"
+ )
+
+;; Kills ledger/magit/etc... special (automatic) windows on 'q' kbd
+(defun quit-and-kill-auxiliary-windows ()
+  "Kill buffer and its window on quitting"
+  (local-set-key (kbd "q") 'kill-buffer-and-window))
+(add-hook 'special-mode-hook #'quit-and-kill-auxiliary-windows)
