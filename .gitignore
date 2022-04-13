@@ -1,2 +1,3 @@
 lightdm/users.conf
 lightdm/*/*.swp
+*.elc
