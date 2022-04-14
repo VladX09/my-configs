@@ -1,5 +1,5 @@
 ;; Move out custom variables
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(setq custom-file (file-truename (expand-file-name "custom.el" user-emacs-directory)))
 (load custom-file)
 
 ;; Config loader
