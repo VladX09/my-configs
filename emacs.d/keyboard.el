@@ -152,7 +152,7 @@
   "p" '("projectile" . projectile-command-map)
 
   "gs" 'magit-status
-  "gm" 'magit-dispatch-popup
+  "gm" 'magit-dispatch
 )
 
 (general-def 'normal 'with-editor-mode-map
