@@ -1,6 +1,5 @@
 (use-package helm
   :config
-  (require 'helm-config)
   (setq helm-split-window-in-side-p t)
   (setq helm-autoresize-max-height 40)
   (setq helm-autoresize-min-height 20)
