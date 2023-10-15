@@ -21,7 +21,7 @@ xkb_symbols "base" {
     key <TLDE> { [ NoSymbol,   NoSymbol,              NoSymbol,              approxeq ] }; // "~"
     key <AE01> { [ NoSymbol,   NoSymbol,           onesuperior,            exclamdown ] }; // "1"
     key <AE02> { [ NoSymbol,   NoSymbol,           twosuperior,               onehalf ] }; // "2"
-    key <AE03> { [ NoSymbol,   NoSymbol,            numbersign,              onethird ] }; // "3"
+    key <AE03> { [ NoSymbol,   NoSymbol,            numbersign,                 U266F ] }; // "3"
     key <AE04> { [ NoSymbol,   NoSymbol,                dollar,            onequarter ] }; // "4"
     key <AE05> { [ NoSymbol,   NoSymbol,                 U2030,              NoSymbol ] }; // "5"
     key <AE06> { [ NoSymbol,   NoSymbol,           asciicircum,               uparrow ] }; // "6"
@@ -59,6 +59,7 @@ xkb_symbols "base" {
     key <AB02> { [ NoSymbol,   NoSymbol,              multiply,                 U22C5 ] }; // "x"
     key <AB03> { [ NoSymbol,   NoSymbol,             copyright,                  cent ] }; // "c"
     key <AB04> { [ NoSymbol,   NoSymbol,             downarrow,                 U25CA ] }; // "v"
+    key <AB05> { [ NoSymbol,   NoSymbol,                 U266D,                 U266D ] }; // "b"
     key <AB07> { [ NoSymbol,   NoSymbol,                 U2212,    enfilledcircbullet ] }; // "m"
     key <AB08> { [ NoSymbol,   NoSymbol,         guillemotleft,                  less ] }; // ","
     key <AB09> { [ NoSymbol,   NoSymbol,        guillemotright,               greater ] }; // "."
@@ -68,6 +69,8 @@ xkb_symbols "base" {
     key <SPCE> { [    space,      space,          nobreakspace,          nobreakspace ] }; // " "
 
     // Reference
+    // U+266F MUSIC SHARP SIGN
+    // U+266D MUSIC FLAT SIGN
     // U+2030 PER MILLE SIGN
     // U+20B4 HRYVNIA SIGN
     // U+0301 COMBINING ACUTE ACCENT
