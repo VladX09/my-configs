@@ -1,0 +1,5 @@
+{button9, button8}
+    qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.invokeShortcut "{Switch to Next Desktop,Switch to Previous Desktop}"
+
+alt + {button9, button8}
+    qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.invokeShortcut "{Window to Next Desktop,Window to Previous Desktop}"

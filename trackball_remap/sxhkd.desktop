@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=sxhkd
+Comment=Simple X hotkey daemon
+Exec=echo ~/.config/sxhkd/sxhkdrc | entr -n pkill -USR1 -x sxhkd & sxhkd
+Terminal=false
+Type=Application
