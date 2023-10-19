@@ -186,6 +186,3 @@
 (general-def 'visual
   "vv" 'evil-normal-state)
 
-(general-def 'insert
-  "jj" 'evil-normal-state)
-
